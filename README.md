@@ -8,17 +8,17 @@ A companhia telefônica Alô mantém dados de seus clientes, números de telefon
 Tipo de Plano: código, descrição, valor mensal, franquia (minutos) e valor da chamada.<br/>
 Cliente: CPF, nome e endereço.<br/>
 Número de Telefone: número, cliente, plano, data/hora de ativação, data/hora de cancelamento e dia de pagamento.
-O dia de pagamento deve ser um dos seguintes dias do mês: 1, 5, 10 ou 15.
-A data/hora de cancelamento é opcional.
-A data/hora de cancelamento deve ser superior à data/hora de ativação.
-A data/hora de cancelamento deve ser superior à data/hora mais recente de chamada originada pelo número registrada no sistema.
-Chamada Telefônica Originada na Rede: número de origem, número de destino, data/ hora de início da chamada, data/hora de fim de chamada.
-Número de origem deve ser um número ativo no sistema (ou seja, sem data de cancelamento informada).
-Número de destino pode não estar cadastrado no sistema, pois pode ser um número de outra operadora.
-A data/hora de fim de chamada deve ser superior à data/hora de início de chamada.
-As datas/horas de início e de fim da chamada devem ser iguais ou superiores à data/hora de ativação.
-O sistema para gerenciar chamadas telefônicas dessa operadora deverá prover as seguintes funcionalidades:
-Tipo de Plano:
+O dia de pagamento deve ser um dos seguintes dias do mês: 1, 5, 10 ou 15.<br/>
+A data/hora de cancelamento é opcional.<br/>
+A data/hora de cancelamento deve ser superior à data/hora de ativação.<br/>
+A data/hora de cancelamento deve ser superior à data/hora mais recente de chamada originada pelo número registrada no sistema.<br/>
+Chamada Telefônica Originada na Rede: número de origem, número de <br/>destino, data/ hora de início da chamada, data/hora de fim de chamada.
+Número de origem deve ser um número ativo no sistema (ou seja, sem data de cancelamento informada).<br/>
+Número de destino pode não estar cadastrado no sistema, pois pode ser um número de outra operadora.<br/>
+A data/hora de fim de chamada deve ser superior à data/hora de início de chamada.<br/>
+As datas/horas de início e de fim da chamada devem ser iguais ou superiores à data/hora de ativação.<br/>
+O sistema para gerenciar chamadas telefônicas dessa operadora deverá prover as seguintes funcionalidades:<br/>
+Tipo de Plano:<br/>
 • Cadastrar: inclui um tipo de plano no sistema.
 • Alterar: permite alterar os dados de um tipo de plano. Todos os campos são alteráveis, exceto o código.
 • Excluir: exclui um tipo de plano do sistema, dada o seu código. Não é permitida a exclusão de tipo de plano que esteja relacionado a número telefônico.
