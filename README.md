@@ -1,12 +1,12 @@
 # Trabalho Poo 2 companhia eletrônica
 
-Trabalho 2 – Laboratório de Programação de Computadores II;
-Prof. Eduardo Cunha Campos;
-Valor: 30 pontos;
+Trabalho 2 – Laboratório de Programação de Computadores II  
+Prof. Eduardo Cunha Campos  
+Valor: 30 pontos  
 Data de entrega: 18/03;
 A companhia telefônica Alô mantém dados de seus clientes, números de telefone ativados, tipos de planos e chamadas telefônicas.
-Tipo de Plano: código, descrição, valor mensal, franquia (minutos) e valor da chamada.
-Cliente: CPF, nome e endereço.
+Tipo de Plano: código, descrição, valor mensal, franquia (minutos) e valor da chamada.<br/>
+Cliente: CPF, nome e endereço.<br/>
 Número de Telefone: número, cliente, plano, data/hora de ativação, data/hora de cancelamento e dia de pagamento.
 O dia de pagamento deve ser um dos seguintes dias do mês: 1, 5, 10 ou 15.
 A data/hora de cancelamento é opcional.
