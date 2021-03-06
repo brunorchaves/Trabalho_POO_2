@@ -19,30 +19,30 @@ A data/hora de fim de chamada deve ser superior à data/hora de início de chama
 As datas/horas de início e de fim da chamada devem ser iguais ou superiores à data/hora de ativação.<br/>
 O sistema para gerenciar chamadas telefônicas dessa operadora deverá prover as seguintes funcionalidades:<br/>
 Tipo de Plano:<br/>
-• Cadastrar: inclui um tipo de plano no sistema.
-• Alterar: permite alterar os dados de um tipo de plano. Todos os campos são alteráveis, exceto o código.
-• Excluir: exclui um tipo de plano do sistema, dada o seu código. Não é permitida a exclusão de tipo de plano que esteja relacionado a número telefônico.
-• Listar: lista todos os dados de todos os tipos de plano cadastrados.
-• Pesquisar: dado o código, exibe os dados do tipo de plano.
-Cliente:
-• Cadastrar: cadastra um cliente no sistema. Não é permitido o cadastro de cliente com CPF que já esteja cadastrado no sistema.
-• Alterar: permite alterar os dados de um cliente. Todos os campos são alteráveis, exceto o CPF.
-• Excluir: exclui um cliente do sistema. Não é permitida a exclusão de cliente que esteja associado a algum número de telefone.
-• Listar: lista os dados de todos os clientes cadastrados no sistema.
-• Pesquisar: dado o CPF do cliente, exibe os seus dados.
-Número de Telefone:
-• Cadastrar: permite cadastrar um número de telefone no sistema. Não é permitido o cadastro de telefone com número que esteja ativo no sistema. Um número está ativo quando não possui data de cancelamento informada.
-• Alterar: permite alterar os dados de um número de telefone. Todos os campos são alteráveis, exceto a data de ativação e o número do telefone.
-• Excluir: permite excluir um número de telefone do sistema.
-• Cancelar número: registra a data de cancelamento do número.
-• Listar: lista os dados de todos os números cadastrados no sistema.
-• Pesquisar: dado o número do telefone, exibe seus dados.
-Chamada Originada:
-• Registrar: permite registrar uma chamada originada. É permitido o registro de chamadas originadas somente para número ativo na data da chamada.
+• Cadastrar: inclui um tipo de plano no sistema.<br/>
+• Alterar: permite alterar os dados de um tipo de plano. Todos os campos são alteráveis, exceto o código.<br/>
+• Excluir: exclui um tipo de plano do sistema, dada o seu código. Não é permitida a exclusão de tipo de plano que esteja relacionado a número telefônico.<br/>
+• Listar: lista todos os dados de todos os tipos de plano cadastrados.<br/>
+• Pesquisar: dado o código, exibe os dados do tipo de plano.<br/>
+Cliente:<br/>
+• Cadastrar: cadastra um cliente no sistema. Não é permitido o cadastro de cliente com CPF que já esteja cadastrado no sistema.<br/>
+• Alterar: permite alterar os dados de um cliente. Todos os campos são alteráveis, exceto o CPF.<br/>
+• Excluir: exclui um cliente do sistema. Não é permitida a exclusão de cliente que esteja associado a algum número de telefone.<br/>
+• Listar: lista os dados de todos os clientes cadastrados no sistema.<br/>
+• Pesquisar: dado o CPF do cliente, exibe os seus dados.<br/>
+Número de Telefone:<br/>
+• Cadastrar: permite cadastrar um número de telefone no sistema. Não é permitido o cadastro de telefone com número que esteja ativo no sistema. Um número está ativo quando não possui data de cancelamento informada.<br/>
+• Alterar: permite alterar os dados de um número de telefone. Todos os campos são alteráveis, exceto a data de ativação e o número do telefone.<br/>
+• Excluir: permite excluir um número de telefone do sistema.<br/>
+• Cancelar número: registra a data de cancelamento do número.<br/>
+• Listar: lista os dados de todos os números cadastrados no sistema.<br/>
+• Pesquisar: dado o número do telefone, exibe seus dados.<br/>
+Chamada Originada:<br/>
+• Registrar: permite registrar uma chamada originada. É permitido o registro de chamadas originadas somente para número ativo na data da chamada.<br/>
 • Alterar: permite alterar os dados de uma chamada originada. Esta opção também deverá observar a restrição de que é permitido o registro de chamadas originadas somente para número ativo na data da chamada.
-• Excluir: permite excluir uma chamada originada.
-• Listar: lista os dados de todas as chamadas cadastradas no sistema.
-• Pesquisar: dado o número de telefone, exibe os dados das chamadas originadas por ele.
+• Excluir: permite excluir uma chamada originada.<br/>
+• Listar: lista os dados de todas as chamadas cadastradas no sistema.<br/>
+• Pesquisar: dado o número de telefone, exibe os dados das chamadas originadas por ele.<br/>
 Relatórios:
 • Números telefônicos de um cliente
 O usuário informa um CPF de um cliente e o sistema exibe os dados dos telefones (ativos e cancelados) dele.
