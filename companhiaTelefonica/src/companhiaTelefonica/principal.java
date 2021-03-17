@@ -2,12 +2,11 @@ package companhiaTelefonica;
 import java.util.Scanner; //importa classe que possui recursos
 import java.util.Arrays;
 
+
 public class principal 
 {
 	Scanner in = new Scanner (System.in);
 	Scanner stringScan = new Scanner (System.in);
-	
-	
 
 	public static void main(String[] args) 
 	{
@@ -33,7 +32,57 @@ public class principal
 		valorChamada = in.nextFloat();
 
 		planoComp[codigo]=new Plano(codigo,descricao,valorMensal,franquia,valorChamada);
-					
+		int opcao =0;
+	
+		while(opcao!=3)
+		{
+			opcao = OpcoesMenu();
+			switch(opcao)
+			{
+				case 1:
+					break;
+				case 2:
+					break;
+				default:
+					break;
+			}
+		}
 	}
-
+	/*********************************************************************
+	* @fn      OpcoesMenu
+	*
+	* @brief   loop que roda as funcoes do menu
+	*
+	* @param   Metodo que gera o texto com as opcoes do menu, chamada na 
+	*		   funcao do menu
+	*
+	* @return  opcao
+	*/
+	public static int OpcoesMenu()
+	{
+		int opcao = 0;
+		Scanner in = new Scanner (System.in);
+			System.out.println("Escolha uma das opcoes abaixo: ");
+			System.out.println("1.Fazer um cadastro");
+			System.out.println("2.Encontrar o produto com o maior preco de venda");
+			System.out.println("3.Sair");
+			opcao = in.nextInt();
+		
+		return opcao;
+	}
+	public static int subOpcoesMenu()
+	{
+		int opcao = 0;
+		Scanner in = new Scanner (System.in);
+		System.out.println("Qual cadsastro voce fara das opcoes abaixo: ");
+		System.out.println("1.Plano");
+		System.out.println("2.Cliente");
+		System.out.println("3.NumeroTelefone");
+		System.out.println("4.ChamadaTelefonica");
+		opcao = in.nextInt();
+		
+		return opcao;
+	}
+	
+	
 }
