@@ -16,5 +16,6 @@ public class Plano extends companhiaEletronica
 		this.franquia = franquia;
 		this.valorChamada = valorChamada;
 	}
+	
 
 }
