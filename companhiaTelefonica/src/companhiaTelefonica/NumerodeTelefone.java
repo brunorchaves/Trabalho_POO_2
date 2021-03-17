@@ -1,15 +1,15 @@
 package companhiaTelefonica;
-import Plano;
+//import Plano;
 
 public class NumerodeTelefone extends companhiaEletronica{
 	private int numero;
-	private String cliente;
+	private Cliente cliente;
 	private Plano plano;
 	private int dataCancelamento ;
 	private int diaPagamento ;
 
-	public NumerodeTelefone(int numero, String cliente, Plano plano, int dataCancelamento, int diaPagamento) {
-		super();
+	public NumerodeTelefone(int numero, Cliente cliente, Plano plano, int dataCancelamento, int diaPagamento) {
+	
 		this.numero = numero;
 		this.cliente = cliente;
 		this.plano = plano;
@@ -17,15 +17,15 @@ public class NumerodeTelefone extends companhiaEletronica{
 		this.diaPagamento = diaPagamento;
 	}
 
-
+/*
 	public String getCliente() {
 		return cliente;
-	}
+	}*/
 
-
+/*
 	public void setCliente(String cliente) {
 		this.cliente = cliente;
-	}
+	}*/
 
 
 	public Plano getPlano() {
