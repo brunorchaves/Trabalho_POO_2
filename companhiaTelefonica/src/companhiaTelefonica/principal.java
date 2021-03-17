@@ -24,10 +24,10 @@ public class principal
 			switch(opcao)
 			{
 				case 1:
-					supOpcao = subOpcoesMenu();
 					
-					while(supOpcao!=4)
+					while(supOpcao!=5)
 					{
+						supOpcao = subOpcoesMenu();
 						switch(supOpcao)
 						{
 							case 1://Cadastro plano
@@ -44,7 +44,7 @@ public class principal
 								System.out.println("Digite o valorChamada do novo produto:\n ");
 								valorChamada = in.nextFloat();
 								planoComp[codigo]=new Plano(codigo,descricao,valorMensal,franquia,valorChamada);
-								System.out.println("Cadastrar outro produto? Sim - 1 Nao - 0\n ");
+								System.out.println("Plano cadastrado !\n ");
 
 								break;
 							case 2://Cadastro cliente
