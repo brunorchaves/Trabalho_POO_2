@@ -1,6 +1,6 @@
 package companhiaTelefonica;
 //código, descrição, valor mensal, franquia (minutos) e valor da chamada.
-public class Plano 
+public class Plano extends companhiaEletronica 
 {
 	private int codigo;
 	private String descricao;

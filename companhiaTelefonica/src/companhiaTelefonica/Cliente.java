@@ -1,9 +1,15 @@
 package companhiaTelefonica;
 
-public class Cliente {
+public class Cliente extends companhiaEletronica
+{
+	private int CPF;
+	private String nome;
+	private int endereço;
 
-	public Cliente() {
-		// TODO Auto-generated constructor stub
+	public Cliente(int CPF ,String nome, int endereço) {
+		this.CPF=CPF;
+		this.nome  = nome;
+		this.endereço = endereço;
 	}
 
 }
