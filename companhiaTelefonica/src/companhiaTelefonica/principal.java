@@ -7,17 +7,12 @@ public class principal
 	public static void main(String[] args) 
 	{
 		//Variaveis
-		int codigo;
-		String descricao;
-		float valorMensal;
-		float franquia;
-		float valorChamada;
 		int opcao =0,supOpcao=0;
 		//Objetos
 		Scanner in = new Scanner (System.in);
 		Scanner stringScan = new Scanner (System.in);
 		Plano planoComp[]= new Plano[100];//Instancia de produto
-	
+
 		while(opcao!=3)
 		{
 			opcao = OpcoesMenu();
@@ -31,7 +26,12 @@ public class principal
 						switch(supOpcao)
 						{
 							case 1://Cadastro plano
-									
+								int codigo;
+								String descricao;
+								float valorMensal;
+								float franquia;
+								float valorChamada;
+								
 								System.out.println("Adicione um novo Plano: ");
 								System.out.println("Digite o Codigo do novo produto:\n ");
 								codigo = in.nextInt();
@@ -48,6 +48,18 @@ public class principal
 
 								break;
 							case 2://Cadastro cliente
+								int cpf;
+								String nome;
+								String endereco;
+
+								System.out.println("Adicione um novo Cliente: ");
+								System.out.println("Digite o CPF do novo Cliente:\n ");
+								cpf = in.nextInt();
+								System.out.println("Digite o nome do novo Cliente:\n ");
+								nome = stringScan.nextLine();
+								System.out.println("Digite o Endereco do novo Cliente:\n ");
+								endereco = stringScan.nextLine();
+								System.out.println("Cliente cadastrado !\n ");
 
 								break;
 							case 3://Cadastro NumeroTelefone
@@ -61,7 +73,8 @@ public class principal
 						}
 					}
 					break;
-				case 2:
+				case 2://Gera relatorios
+
 					break;
 				default:
 					break;
