@@ -8,7 +8,7 @@ public class NumerodeTelefone extends companhiaEletronica{
 	private int diaPagamento ;
 
 	public NumerodeTelefone() {
-		this.numero=codigo;
+		this.numero=numero;
 		this.cliente  = cliente;
 		this.plano = plano;
 		this.dataCancelamento = dataCancelamento;
