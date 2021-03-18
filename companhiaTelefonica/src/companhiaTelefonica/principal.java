@@ -63,8 +63,25 @@ public class principal
 
 								break;
 							case 3://Cadastro NumeroTelefone
+								int numero;
+								//Cliente
+								int dataCancelamento ;
+								int diaPagamento ;
+
+								System.out.println("Adicione um novo Numero de Telefone: ");
+								System.out.println("Digite o numero do  Numero de Telefone:\n ");
+								numero = in.nextInt();
+
+								// System.out.println("Digite para adicionar o cliente:\n ");
+								// nome = stringScan.nextLine();
+
+								// System.out.println("Digite o Endereco do novo Cliente:\n ");
+								// endereco = stringScan.nextLine();
+								// System.out.println("Cliente cadastrado !\n ");
 								break;
 							case 4://Cadastro ChamadaTelefonica
+
+								
 								break;
 						
 							default:
