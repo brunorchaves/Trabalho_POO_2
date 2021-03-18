@@ -44,7 +44,7 @@ public class principal
 								System.out.println("Digite a descricao:");
 								descricao=stringScan2.nextLine(); 
 								System.out.println("Digite a franquia:");
-								franquia=stringScan.nextInt();
+								franquia=s.nextInt();
 								System.out.println("Digite o valor da chamada:");
 								valorChamada=stringScan.nextFloat();
 								p=new Plano(codigo, descricao, valorMensal, franquia, valorChamada);
