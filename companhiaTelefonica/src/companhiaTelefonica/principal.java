@@ -9,7 +9,7 @@ public class principal
 		//Variaveis
 		int opcao =0,supOpcao=0;
 		//Objetos
-		Scanner in = new Scanner (System.in);
+		Scanner s = new Scanner (System.in);
 		Scanner stringScan = new Scanner (System.in);
 		Plano planoComp[]= new Plano[100];//Instancia de produto
 
@@ -26,41 +26,47 @@ public class principal
 						switch(supOpcao)
 						{
 							case 1://Cadastro plano
+								Plano p;
 								int codigo;
 								String descricao;
 								float valorMensal;
-								float franquia;
+								int franquia;
 								float valorChamada;
-								
-								System.out.println("Adicione um novo Plano: ");
-								System.out.println("Digite o Codigo do novo produto:\n ");
-								codigo = in.nextInt();
-								System.out.println("Digite a descricao do novo produto:\n ");
-								descricao = stringScan.nextLine();
-								System.out.println("Digite a valorMensal Plano:\n ");
-								valorMensal = in.nextFloat();
-								System.out.println("Digite a franquia do novo produto:\n ");
-								franquia = in.nextFloat();
-								System.out.println("Digite o valorChamada do novo produto:\n ");
-								valorChamada = in.nextFloat();
-								planoComp[codigo]=new Plano(codigo,descricao,valorMensal,franquia,valorChamada);
-								System.out.println("Plano cadastrado !\n ");
-
+								System.out.println("Digite o codigo:");
+								codigo=s.nextInt();
+								System.out.println("Digite o valor mensal:");
+								valorMensal=s.nextFloat();
+								System.out.println("Digite a descricao:");
+								descricao=stringScan.nextLine();
+								System.out.println("Digite a franquia:");
+								franquia=stringScan.nextInt();
+								System.out.println("Digite o valor da chamada:");
+								valorChamada=stringScan.nextFloat();
+								p=new Plano(codigo, descricao, valorMensal, franquia, valorChamada);
+								Gerente.adicionaPlano(p);
 								break;
 							case 2://Cadastro cliente
-								int cpf;
+								long CPF;
 								String nome;
-								String endereco;
-
-								System.out.println("Adicione um novo Cliente: ");
-								System.out.println("Digite o CPF do novo Cliente:\n ");
-								cpf = in.nextInt();
-								System.out.println("Digite o nome do novo Cliente:\n ");
-								nome = stringScan.nextLine();
-								System.out.println("Digite o Endereco do novo Cliente:\n ");
-								endereco = stringScan.nextLine();
-								System.out.println("Cliente cadastrado !\n ");
-
+								Endereco endereco=new Endereco();
+								Cliente c;
+								System.out.println("Digite o CPF:");
+								CPF=s.nextLong();
+								System.out.println("Digite o nome:");
+								nome=stringScan.nextLine();
+								System.out.println("Digite o bairro:");
+								endereco.setBairro(stringScan.nextLine());
+								System.out.println("Digite a cidade:");
+								endereco.setCidade(stringScan.nextLine());
+								System.out.println("Digite o estado:");
+								endereco.setEstado(stringScan.nextLine());
+								System.out.println("Digite a rua:");
+								endereco.setRua(stringScan.nextLine());
+								System.out.println("Digite o numero da casa:");
+								endereco.setNumero(stringScan.nextInt());
+								c=new Cliente(CPF, nome, endereco);
+								Gerente.adicionaCliente(c);
+								
 								break;
 							case 3://Cadastro NumeroTelefone
 								int numero;
@@ -70,7 +76,7 @@ public class principal
 
 								System.out.println("Adicione um novo Numero de Telefone: ");
 								System.out.println("Digite o numero do  Numero de Telefone:\n ");
-								numero = in.nextInt();
+								numero = s.nextInt();
 
 								// System.out.println("Digite para adicionar o cliente:\n ");
 								// nome = stringScan.nextLine();
@@ -114,7 +120,7 @@ public class principal
 		Scanner inOp = new Scanner (System.in);
 			System.out.println("Escolha uma das opcoes abaixo: ");
 			System.out.println("1.Fazer um cadastro");
-			System.out.println("2.Encontrar o produto com o maior preco de venda");
+			System.out.println("2.Gerar relatorio");
 			System.out.println("3.Sair");
 			opcao = inOp.nextInt();
 		
@@ -124,7 +130,7 @@ public class principal
 	{
 		int opcao = 0;
 		Scanner insubOp = new Scanner (System.in);
-		System.out.println("Qual cadsastro voce fara das opcoes abaixo: ");
+		System.out.println("Qual cadastro voce fara das opcoes abaixo: ");
 		System.out.println("1.Plano");
 		System.out.println("2.Cliente");
 		System.out.println("3.NumeroTelefone");
