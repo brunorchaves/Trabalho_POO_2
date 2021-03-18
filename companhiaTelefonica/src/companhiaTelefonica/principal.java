@@ -1,6 +1,10 @@
 package companhiaTelefonica;
-import java.util.Scanner; //importa classe que possui recursos
+import java.util.Scanner;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
+import java.util.List;
+
 
 public class principal 
 {
@@ -70,23 +74,45 @@ public class principal
 								break;
 							case 3://Cadastro NumeroTelefone
 								int numero;
-								//Cliente
-								int dataCancelamento ;
-								int diaPagamento ;
-
-								System.out.println("Adicione um novo Numero de Telefone: ");
-								System.out.println("Digite o numero do  Numero de Telefone:\n ");
-								numero = s.nextInt();
-
-								// System.out.println("Digite para adicionar o cliente:\n ");
-								// nome = stringScan.nextLine();
-
-								// System.out.println("Digite o Endereco do novo Cliente:\n ");
-								// endereco = stringScan.nextLine();
-								// System.out.println("Cliente cadastrado !\n ");
+								Cliente cliente;
+								Plano plano;
+								int[] diaspagamento= {1,5,10,15};
+								System.out.println("Digite o numero de telefone:");
+								numero=s.nextInt();
+								System.out.println("Digite o CPF do cliente:");
+								c=Gerente.pesquisaCliente(s.nextInt());
+								System.out.println("Digite o codigo do plano:");
+								p=Gerente.pesquisaPlano(s.nextInt());
+								NumerodeTelefone telefone=new NumerodeTelefone(numero, c, p, null, diaspagamento);
+								Gerente.adicionaTelefone(telefone);
 								break;
 							case 4://Cadastro ChamadaTelefonica
-
+								NumerodeTelefone numeroOrigem;
+								long telefoneDestino;
+								Date dataInicio=new Date();
+								Date dataTermino=new Date();
+								System.out.println("Digite o numero de origem:");
+								numeroOrigem=Gerente.pesquisaNumerodeTelefone(s.nextLong());
+								System.out.println("Digite o numero de destino:");
+								telefoneDestino=s.nextLong();
+								System.out.println("Digite o dia da data de inicio:");
+								dataInicio.setDate(s.nextInt());
+								System.out.println("Digite o mes da data de inicio:");
+								dataInicio.setMonth(s.nextInt());
+								System.out.println("Digite a hora da data de inicio:");
+								dataInicio.setHours(s.nextInt());
+								System.out.println("Digite o minuto da data de inicio:");
+								dataInicio.setMinutes(s.nextInt());
+								System.out.println("Digite o dia da data de termino:");
+								dataTermino.setDate(s.nextInt());
+								System.out.println("Digite o mes da data de termino:");
+								dataTermino.setMonth(s.nextInt());
+								System.out.println("Digite a hora da data de termino:");
+								dataTermino.setHours(s.nextInt());
+								System.out.println("Digite o minuto da data de termino:");
+								dataTermino.setMinutes(s.nextInt());
+								Chamada_Originada chamada=new Chamada_Originada(numeroOrigem, telefoneDestino, dataInicio, dataTermino);
+								Gerente.adicionaChamada(chamada);
 								
 								break;
 						
