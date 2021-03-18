@@ -42,11 +42,11 @@ public class principal
 								System.out.println("Digite o valor mensal:");
 								valorMensal=s.nextFloat();
 								System.out.println("Digite a descricao:");
-								descricao=stringScan2.nextLine(); 
+								descricao=stringScan.nextLine(); 
 								System.out.println("Digite a franquia:");
 								franquia=s.nextInt();
 								System.out.println("Digite o valor da chamada:");
-								valorChamada=stringScan.nextFloat();
+								valorChamada=s.nextFloat();
 								p=new Plano(codigo, descricao, valorMensal, franquia, valorChamada);
 								Gerente.adicionaPlano(p);
 								break;
@@ -60,7 +60,7 @@ public class principal
 								System.out.println("Digite o nome:");
 								nome=stringScan.nextLine();
 								System.out.println("Digite o bairro:");
-								endereco.setBairro(stringScan2.nextLine());
+								endereco.setBairro(stringScan.nextLine());
 								System.out.println("Digite a cidade:");
 								endereco.setCidade(stringScan.nextLine());
 								System.out.println("Digite o estado:");
@@ -68,7 +68,7 @@ public class principal
 								System.out.println("Digite a rua:");
 								endereco.setRua(stringScan.nextLine());
 								System.out.println("Digite o numero da casa:");
-								endereco.setNumero(stringScan.nextInt());
+								endereco.setNumero(s.nextInt());
 								c=new Cliente(CPF, nome, endereco);
 								Gerente.adicionaCliente(c);
 								
