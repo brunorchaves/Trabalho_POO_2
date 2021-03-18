@@ -58,7 +58,7 @@ public class principal
 								System.out.println("Digite o CPF:");
 								CPF=s.nextLong();
 								System.out.println("Digite o nome:");
-								nome=stringScan.nextLine();
+								nome=stringScan2.nextLine();
 								System.out.println("Digite o bairro:");
 								endereco.setBairro(stringScan.nextLine());
 								System.out.println("Digite a cidade:");
@@ -79,9 +79,9 @@ public class principal
 								Plano plano;
 								int[] diaspagamento= {1,5,10,15};
 								System.out.println("Digite o numero de telefone:");
-								numero=s.nextInt();
+								numero=s.nextLong();
 								System.out.println("Digite o CPF do cliente:");
-								c=Gerente.pesquisaCliente(s.nextInt());
+								c=Gerente.pesquisaCliente(s.nextLong());
 								System.out.println("Digite o codigo do plano:");
 								p=Gerente.pesquisaPlano(s.nextInt());
 								NumerodeTelefone telefone=new NumerodeTelefone(numero, c, p, null, diaspagamento);
