@@ -3,13 +3,13 @@ package companhiaTelefonica;
 import java.util.Date;
 import java.util.List;
 public class NumerodeTelefone implements Dado{
-	private int numero;
+	private long numero;
 	private Cliente cliente;
 	private Plano plano;
 	private Date dataCancelamento;
 	private int[] diasPagamento;
 	
-	public NumerodeTelefone(int numero, Cliente cliente, Plano plano, Date dataCancelamento,
+	public NumerodeTelefone(long numero, Cliente cliente, Plano plano, Date dataCancelamento,
 			int[] diaPagamento) {
 		super();
 		this.numero = numero;
@@ -42,7 +42,7 @@ public class NumerodeTelefone implements Dado{
 	public void setDiaPagamento(int[]  diaPagamento) {
 		this.diasPagamento = diaPagamento;
 	}
-	public int getNumero() {
+	public long getNumero() {
 		return numero;
 	}
 	@Override

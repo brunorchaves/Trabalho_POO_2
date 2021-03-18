@@ -15,6 +15,7 @@ public class principal
 		//Objetos
 		Scanner s = new Scanner (System.in);
 		Scanner stringScan = new Scanner (System.in);
+		Scanner stringScan2 = new Scanner (System.in);
 		Plano planoComp[]= new Plano[100];//Instancia de produto
 
 		while(opcao!=3)
@@ -41,7 +42,7 @@ public class principal
 								System.out.println("Digite o valor mensal:");
 								valorMensal=s.nextFloat();
 								System.out.println("Digite a descricao:");
-								descricao=stringScan.nextLine();
+								descricao=stringScan2.nextLine(); 
 								System.out.println("Digite a franquia:");
 								franquia=stringScan.nextInt();
 								System.out.println("Digite o valor da chamada:");
@@ -59,7 +60,7 @@ public class principal
 								System.out.println("Digite o nome:");
 								nome=stringScan.nextLine();
 								System.out.println("Digite o bairro:");
-								endereco.setBairro(stringScan.nextLine());
+								endereco.setBairro(stringScan2.nextLine());
 								System.out.println("Digite a cidade:");
 								endereco.setCidade(stringScan.nextLine());
 								System.out.println("Digite o estado:");
@@ -73,7 +74,7 @@ public class principal
 								
 								break;
 							case 3://Cadastro NumeroTelefone
-								int numero;
+								long numero;
 								Cliente cliente;
 								Plano plano;
 								int[] diaspagamento= {1,5,10,15};
@@ -123,6 +124,10 @@ public class principal
 					}
 					break;
 				case 2://Gera relatorios
+					System.out.println("Digite o numero de telefone para ser gerado Relatorio:");
+
+					System.out.println("Digite o mes a ser gerado Relatorio:");
+					
 
 					break;
 				default:
